@@ -4,10 +4,10 @@ class Solution {
         int sum = 0, c = 0,l=0;
         for(int r = 0; r < n;r++){
             sum += arr[r];
-            int m = sum;
-            System.out.println(sum);
+            //int m = sum;
+            //System.out.println(sum);
             if(r >= k -1){
-                int avg = m / k;
+                int avg = sum / k;
                 if(avg >= threshold) c++;
                 sum -= arr[l++]; 
             }

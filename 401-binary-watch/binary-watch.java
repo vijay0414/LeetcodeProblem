@@ -2,9 +2,9 @@ class Solution {
     public List<String> readBinaryWatch(int t) {
         List<String> list = new ArrayList<>();
         for(int h = 0; h < 12;h++){
-            StringBuilder sb = new StringBuilder();
             int a = Integer.bitCount(h);
             for(int m = 0 ; m < 60;m++){
+                StringBuilder sb = new StringBuilder();
                 int b = Integer.bitCount(m);
                 if((a+b) == t){
                     sb.append(h + "");
@@ -16,7 +16,7 @@ class Solution {
                         sb.append(m+"");
                     }
                     list.add(sb.toString());
-                    sb.setLength(0);
+                    //sb.setLength(0);
                 }
             }
         }

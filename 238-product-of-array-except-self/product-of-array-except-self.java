@@ -11,11 +11,9 @@ class Solution {
         for (int i = nums.length - 2; i >= 0; i--) {
             suf[i] = suf[i + 1] * nums[i + 1];
         }
-        System.out.println(Arrays.toString(pre));
-        System.out.println(Arrays.toString(suf));
+     
         
         for (int i = 0; i < pre.length ; i++) {
-           
             nums[i] = pre[i] * suf[i];
         }
 

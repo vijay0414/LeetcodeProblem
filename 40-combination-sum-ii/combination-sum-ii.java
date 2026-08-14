@@ -7,7 +7,7 @@ class Solution {
     }
 
     public void backtrack(int st , int[] can,int tar,List<List<Integer>> list,List<Integer> l){
-        if(tar == 0 && !list.contains(new ArrayList<>(l))){
+        if(tar == 0){
             list.add(new ArrayList<>(l));
             return;
         }
@@ -16,7 +16,7 @@ class Solution {
             if(can[i] > tar) {
                 break;
             }
-            if (i > st && can[i] == can[i - 1]) {
+            if(i > st && can[i] == can[i - 1]) {
                 continue;
             }
             l.add(can[i]);
